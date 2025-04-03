@@ -1,4 +1,3 @@
-import { useRef, useImperativeHandle } from "react"
 import { createPortal } from "react-dom"
 
 function ResultModal({ ref, result, targetTime, remainingTime, onReset }) {
