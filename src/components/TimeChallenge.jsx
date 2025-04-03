@@ -11,7 +11,7 @@ function TimeChallenge({ title, targetTime }) {
 
   if (timeRemaining <= 0) {
     clearInterval(timer.current)
-    dialog.current.open()
+    dialog.current.showModal()
   }
 
   function handleReset() {
@@ -19,6 +19,7 @@ function TimeChallenge({ title, targetTime }) {
   }
 
   function handleStart() {
+    
     timer.current = setInterval(() => {
       setTimeRemainng(prevTimeRemaining => prevTimeRemaining - 10)
     }, 10)
@@ -26,7 +27,7 @@ function TimeChallenge({ title, targetTime }) {
   }
 
   function handleStop() {
-    dialog.current.open()
+    dialog.current.showModal()
     clearInterval(timer.current)
   }
 
